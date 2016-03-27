@@ -44,7 +44,7 @@ def xml2dict(item):
                                'html.parser').get_text()
     pubDate = time.strptime(xmldict['pubDate'], '%a, %d %b %Y %H:%M:%S +0000')
     xmldict['pubDate'] = time.mktime(pubDate)
-    xmldict['pubDateStr'] = time.strftime('%Y/%b/%d', pubDate)
+    xmldict['pubDateStr'] = time.strftime('%Y/%m/%d', pubDate)
 
     return xmldict
 
